@@ -5,7 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import RootLayout from "../components/layout";
-import Loading from "../components/ui/Loading";
+import Loading from "../components/ui/loading";
 import { routePaths } from "./route-paths";
 
 const HomePage = lazy(() => import("../pages/home/home"));

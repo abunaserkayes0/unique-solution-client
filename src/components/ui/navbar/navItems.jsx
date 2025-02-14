@@ -10,7 +10,7 @@ export const navItems = (
         <div tabIndex={0}>Service</div>
         <ul
           tabIndex={0}
-          className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+          className="dropdown-content menu bg-base-100 rounded-box z-50 w-52 p-2 shadow-sm"
         >
           <li className="text-xs font-semibold md:text-xs">
             <Link to="">Procurement & Supply Chain Consultancy</Link>
