@@ -1,5 +1,4 @@
 import Button from "../button/button";
-import TypeWriter from "typewriter-effect";
 export default function hero() {
   return (
     <div className="relative min-h-screen flex items-center justify-center text-center">
@@ -21,13 +20,7 @@ export default function hero() {
 
       <div className="relative text-white animate__animated animate__backInDown">
         <h1 className="mb-5 text-5xl font-bold">
-          <TypeWriter
-            options={{
-              strings: ["Unique Solutions The Fine Unique Experts"],
-              autoStart: true,
-              loop: true,
-            }}
-          />
+          Unique Solutions The Fine Unique Experts
         </h1>
         <p className="mb-5 max-w-1/2 mx-auto">
           Unique Solutions stands as a premier provider of expert solutions
