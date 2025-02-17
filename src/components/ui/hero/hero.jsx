@@ -19,7 +19,7 @@ export default function hero() {
 
       <div className="absolute top-0 left-0 w-full h-full bg-black/70"></div>
 
-      <div className="relative text-white">
+      <div className="relative text-white animate__animated animate__backInDown">
         <h1 className="mb-5 text-5xl font-bold">
           <TypeWriter
             options={{
@@ -29,7 +29,7 @@ export default function hero() {
             }}
           />
         </h1>
-        <p className="mb-5 max-w-lg mx-auto">
+        <p className="mb-5 max-w-1/2 mx-auto">
           Unique Solutions stands as a premier provider of expert solutions
           tailored to diverse industries. With a commitment to excellence, we
           specialize in empowering individual brands and affiliates through
