@@ -1,6 +1,6 @@
 export default function service({ service: { title, description, image } }) {
   return (
-    <div className="card bg-base-100 shadow-lg hover:cursor-pointer animate__animated animate__backInUp">
+    <div className="card bg-base-100 shadow-lg hover:cursor-pointer">
       <figure>
         <img src={image} alt="Album" />
       </figure>

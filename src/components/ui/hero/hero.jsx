@@ -10,7 +10,7 @@ export default function hero() {
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
         <source
-          src="https://res.cloudinary.com/dhjkntuy2/video/upload/v1739559792/Unique%20Solution/video_wrsxag.mp4"
+          src="https://res.cloudinary.com/dhjkntuy2/video/upload/v1739824193/Unique%20Solution/Videos/video_iykmri.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
@@ -18,7 +18,7 @@ export default function hero() {
 
       <div className="absolute top-0 left-0 w-full h-full bg-black/70"></div>
 
-      <div className="relative text-white animate__animated animate__backInDown">
+      <div className="relative text-white">
         <h1 className="mb-5 text-5xl font-bold">
           Unique Solutions The Fine Unique Experts
         </h1>

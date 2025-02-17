@@ -25,9 +25,6 @@ export default function Testimonials() {
           delay: 3000,
         }}
         loop={true}
-        pagination={{
-          clickable: true,
-        }}
         breakpoints={{
           640: {
             slidesPerView: 1,
@@ -43,37 +40,32 @@ export default function Testimonials() {
           },
         }}
         modules={[Pagination, Autoplay]}
-        className="mySwiper my-10"
       >
-        <SwiperSlide>
+        <SwiperSlide className="flex justify-center p-5">
           <Testimonial
             img="https://res.cloudinary.com/dhjkntuy2/image/upload/v1737124513/FoodVillage/cutomers/customer-4_wx2qnv.jpg"
             name="Hasan Jaminl"
-            profession="Molecube"
             rating="3"
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="flex justify-center p-5">
           <Testimonial
             img="https://res.cloudinary.com/dhjkntuy2/image/upload/v1737124513/FoodVillage/cutomers/customer-2_pqrobk.jpg"
             name="Hasan Jaminl"
-            profession="Molecube"
             rating="3"
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="flex justify-center p-5">
           <Testimonial
             img="https://res.cloudinary.com/dhjkntuy2/image/upload/v1737124513/FoodVillage/cutomers/customer-1_caiysc.jpg"
             name="Hasan Jaminl"
-            profession="Molecube"
             rating="3"
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="flex justify-center p-5">
           <Testimonial
             img="https://res.cloudinary.com/dhjkntuy2/image/upload/v1737124512/FoodVillage/cutomers/customer-3_lpufft.jpg"
             name="Hasan Jaminl"
-            profession="Molecube"
             rating="3"
           />
         </SwiperSlide>
