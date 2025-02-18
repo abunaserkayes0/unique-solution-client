@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { navItems } from "./navItems";
-import logo from "/cover.png";
 export default function Navbar() {
   return (
     <div className="navbar bg-base-100 sticky top-0 z-10 shadow">
@@ -30,8 +29,11 @@ export default function Navbar() {
           </ul>
         </div>
         <Link to="/">
-          <div className="w-32">
-            <img src={logo} alt="Image missing" />
+          <div className="w-20">
+            <img
+              src="https://res.cloudinary.com/dhjkntuy2/image/upload/v1739858360/Unique%20Solution/only-images/logo_xboxbq.jpg"
+              alt="Image missing"
+            />
           </div>
         </Link>
       </div>
