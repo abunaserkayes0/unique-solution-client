@@ -19,15 +19,18 @@ export default function hero() {
       <div className="absolute top-0 left-0 w-full h-full bg-black/70"></div>
 
       <div className="relative text-white">
-        <h1 className="mb-5 text-5xl font-bold">
-          Unique Solutions The Fine Unique Experts
+        <h1 className="mb-5 text-4xl font-bold">
+          Unique Solutions – The Fine Unique Experts
         </h1>
+        <h2 className="text-2xl font-semibold my-5">
+          Your Partner in Excellence Across Industries
+        </h2>
         <p className="mb-5 max-w-1/2 mx-auto">
-          Unique Solutions stands as a premier provider of expert solutions
-          tailored to diverse industries. With a commitment to excellence, we
-          specialize in empowering individual brands and affiliates through
-          innovative strategies, top-tier expertise, and a results-driven
-          approach.
+          At Unique Solutions, we bring expertise across multiple industries,
+          offering tailored consultancy, advisory services, and business
+          ventures. Whether you are optimizing your supply chain, starting a new
+          business, or expanding into new markets, our team is here to provide
+          you with innovative solutions for long-term success.
         </p>
         <div className="flex justify-center space-x-5">
           <Button className="btn"> Get Started </Button>
