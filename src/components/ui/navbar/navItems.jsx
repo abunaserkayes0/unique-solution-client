@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export const navItems = (
-  <ul className="flex flex-col md:flex-row gap-4 text-xs font-semibold md:text-lg">
+  <ul className="flex flex-col gap-4 text-xs font-semibold md:text-lg">
     <li>
       <Link to="/">HomePage</Link>
     </li>
