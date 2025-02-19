@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function footer() {
   return (
     <footer className="footer footer-horizontal footer-center bg-base-100 text-base-content rounded p-10 mt-20">
-      <nav className="grid grid-flow-col gap-4">
+      <nav className="grid grid-flow-row gap-4 md:grid-flow-col">
         <Link className="link link-hover" to="">
           HomePage
         </Link>
