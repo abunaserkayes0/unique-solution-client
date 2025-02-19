@@ -7,6 +7,7 @@ import {
 import RootLayout from "../components/layout";
 import Loading from "../components/ui/loading";
 import { routePaths } from "./route-paths";
+import ServiceDetails from "../components/ui/servicesDetails/servicesDetails";
 
 const HomePage = lazy(() => import("../pages/home/home"));
 const Login = lazy(() => import("../pages/auth/login/login"));
@@ -36,6 +37,14 @@ export const router = createBrowserRouter(
         element={
           <Suspense fallback={<Loading />}>
             <Register />
+          </Suspense>
+        }
+      />
+      <Route
+        path={routePaths.service.details}
+        element={
+          <Suspense fallback={<Loading />}>
+            <ServiceDetails />
           </Suspense>
         }
       />

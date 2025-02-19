@@ -7,13 +7,13 @@ export const navItems = (
     </li>
     <li>
       <div className="dropdown dropdown-hover dropdown-right lg:dropdown-bottom">
-        <li tabIndex={0} className="focus:outline-none">
+        <span tabIndex={0} className="focus:outline-none cursor-pointer">
           Service
-        </li>
-        <ul className="dropdown-content menu bg-base-100 rounded-box z-50 w-40 p-2 shadow-sm">
+        </span>
+        <ul className="dropdown-content menu bg-base-100 rounded-box z-50 w-52 p-2 shadow-sm">
           <li className="relative group">
-            <Link to="/services/consultancy">Consultancy</Link>
-            <ul className="absolute left-full top-0 hidden group-hover:block bg-base-100 rounded-box z-50 w-64 p-2 shadow-sm">
+            <Link>Consultancy</Link>
+            <ul className="absolute left-full top-0 hidden group-hover:block bg-base-100 rounded-box z-50 w-96 p-2 shadow-sm">
               <li>
                 <Link to="/services/consultancy/business">
                   Procurement & Supply Chain Consultancy
@@ -42,8 +42,8 @@ export const navItems = (
             </ul>
           </li>
           <li className="relative group">
-            <Link to="/services/consultancy">Advisory Services</Link>
-            <ul className="absolute left-full top-0 hidden group-hover:block bg-base-100 rounded-box z-50 w-64 p-2 shadow-sm">
+            <Link>Advisory Services</Link>
+            <ul className="absolute left-full top-0 hidden group-hover:block bg-base-100 rounded-box z-50 w-96 p-2 shadow-sm">
               <li>
                 <Link to="/services/consultancy/business">
                   Healthcare & Wellness Solutions

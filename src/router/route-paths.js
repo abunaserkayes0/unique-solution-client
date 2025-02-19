@@ -6,4 +6,8 @@ export const routePaths = {
     login: "login",
     register: "register",
   },
+  service: {
+    root: "/services",
+    details: `/services/:id`,
+  },
 };
