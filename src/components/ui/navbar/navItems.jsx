@@ -12,7 +12,7 @@ export const navItems = (
         </span>
         <ul className="dropdown-content menu bg-base-100 rounded-box z-50 w-52 p-2 shadow-sm">
           <li className="relative group">
-            <Link>Consultancy</Link>
+            <Link>Consultancy & Advisory Services</Link>
             <ul className="absolute left-full top-0 hidden group-hover:block bg-base-100 rounded-box z-50 w-96 p-2 shadow-sm">
               <li>
                 <Link to="/services/consultancy/business">
@@ -42,7 +42,7 @@ export const navItems = (
             </ul>
           </li>
           <li className="relative group">
-            <Link>Advisory Services</Link>
+            <Link>Business & Affiliate Ventures</Link>
             <ul className="absolute left-full top-0 hidden group-hover:block bg-base-100 rounded-box z-50 w-96 p-2 shadow-sm">
               <li>
                 <Link to="/services/consultancy/business">
