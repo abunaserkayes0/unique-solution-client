@@ -103,9 +103,6 @@ export const navItems = (
       <Link to="/about">About Us</Link>
     </li>
     <li>
-      <Link to="/affiliate">Join Our Affiliate Program</Link>
-    </li>
-    <li>
       <Link to="/blog">Blog</Link>
     </li>
     <li>
