@@ -1,6 +1,6 @@
 import { Star } from "lucide-react";
 
-export default function Testimonial({ img, name, rating }) {
+export default function Testimonial({ img, name, rating, description }) {
   return (
     <div className="flex flex-col justify-center items-center text-center p-4">
       <section className="flex flex-col items-center justify-between gap-3">
@@ -12,12 +12,7 @@ export default function Testimonial({ img, name, rating }) {
         </div>
       </section>
       <section>
-        <p className="italic my-3">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-          tempore explicabo nemo, sit quisquam eveniet nulla aperiam sequi odit
-          optio, asperiores voluptatum rerum, placeat perspiciatis. Doloribus
-          illo aspernatur sunt accusantium.
-        </p>
+        <p className="italic my-3">{description}</p>
         <div className="flex items-center justify-center gap-1">
           {Array.from({ length: 5 }, (_, index) => {
             return (
