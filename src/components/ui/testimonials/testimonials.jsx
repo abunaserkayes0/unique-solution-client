@@ -13,7 +13,6 @@ export default function Testimonials() {
   return (
     <div className="my-10">
       <Content
-        miniTitle="Testimonial"
         title="What Customers Says"
         paragraph="the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. "
       />

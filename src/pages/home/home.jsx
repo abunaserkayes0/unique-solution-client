@@ -14,7 +14,7 @@ export default function Home() {
 
     const testimonialsTimer = setTimeout(() => {
       setShowTestimonials(true);
-    }, 2000); 
+    }, 2000);
 
     return () => {
       clearTimeout(servicesTimer);
@@ -29,7 +29,7 @@ export default function Home() {
       </div>
 
       {showServices && (
-        <div className="animate__animated animate__fadeInUp animate__delay-1s">
+        <div className="animate__animated animate__rollIn animate__delay-1s">
           <Services />
         </div>
       )}

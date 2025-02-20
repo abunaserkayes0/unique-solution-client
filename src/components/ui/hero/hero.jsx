@@ -1,5 +1,6 @@
 import Button from "../button/button";
-export default function hero() {
+
+export default function Hero() {
   return (
     <div className="relative min-h-screen flex items-center justify-center text-center">
       <video
@@ -15,12 +16,20 @@ export default function hero() {
         />
         Your browser does not support the video tag.
       </video>
-
+      <div className="absolute w-52 h-full flex flex-col items-center top-24">
+        <img
+          className="w-full opacity-40"
+          src="https://res.cloudinary.com/dhjkntuy2/image/upload/v1740067849/Unique%20Solution/only-images/logo_n5brpl.png"
+          alt="Image Overlay"
+        />
+      </div>
       <div className="absolute top-0 left-0 w-full h-full bg-black/70"></div>
-
       <div className="relative text-white">
         <h1 className="mb-5 text-4xl font-bold">
-          Unique Solutions – The Fine Unique Experts
+          Unique Solutions –{" "}
+          <span className="text-3xl font-semibold">
+            The Fine Unique Experts
+          </span>
         </h1>
         <h2 className="text-2xl font-semibold my-5">
           Your Partner in Excellence Across Industries

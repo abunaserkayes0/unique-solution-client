@@ -31,7 +31,7 @@ export default function Navbar() {
         <Link to="/">
           <div className="w-20">
             <img
-              src="https://res.cloudinary.com/dhjkntuy2/image/upload/v1739858360/Unique%20Solution/only-images/logo_xboxbq.jpg"
+              src="https://res.cloudinary.com/dhjkntuy2/image/upload/v1740067849/Unique%20Solution/only-images/logo_n5brpl.png"
               alt="Image missing"
             />
           </div>
