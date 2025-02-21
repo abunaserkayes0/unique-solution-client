@@ -6,7 +6,7 @@ import Content from "../content/content";
 
 export default function Services() {
   const [services, setServices] = useState([]);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchServices = async () => {
@@ -16,7 +16,7 @@ export default function Services() {
       } catch (error) {
         console.error("Error fetching services:", error);
       } finally {
-        setLoading(false); 
+        setLoading(false);
       }
     };
 
@@ -26,7 +26,7 @@ export default function Services() {
   return (
     <section>
       <Content
-        title="Our Services"
+        title="Our Services & Affiliate Programs"
         paragraph="We offer a wide range of services to help you achieve your goals."
       />
       <div className="grid grid-cols-1 gap-10 px-5 sm:grid-cols-2 lg:grid-cols-3 mx-10">
