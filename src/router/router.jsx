@@ -8,6 +8,7 @@ import RootLayout from "../components/layout";
 import Loading from "../components/ui/loading";
 import { routePaths } from "./route-paths";
 import ServiceDetails from "../components/ui/servicesDetails/servicesDetails";
+import NotFound from "../components/ui/notFound/notFound";
 
 const HomePage = lazy(() => import("../pages/home/home"));
 const Login = lazy(() => import("../pages/auth/login/login"));
@@ -48,6 +49,7 @@ export const router = createBrowserRouter(
           </Suspense>
         }
       />
+      <Route path={routePaths.notFound} element={<NotFound />} />
     </Route>
   )
 );

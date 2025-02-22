@@ -10,4 +10,5 @@ export const routePaths = {
     root: "/services",
     details: `/services/:id`,
   },
+  notFound: "*",
 };
