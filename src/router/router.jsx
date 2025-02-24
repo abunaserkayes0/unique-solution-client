@@ -13,6 +13,7 @@ import NotFound from "../components/ui/notFound/notFound";
 const HomePage = lazy(() => import("../pages/home/home"));
 const Login = lazy(() => import("../pages/auth/login/login"));
 const Register = lazy(() => import("../pages/auth/register/register"));
+const AboutUs = lazy(() => import("../pages/about/about"));
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -46,6 +47,14 @@ export const router = createBrowserRouter(
         element={
           <Suspense fallback={<Loading />}>
             <ServiceDetails />
+          </Suspense>
+        }
+      />
+      <Route
+        path={routePaths.about.root}
+        element={
+          <Suspense fallback={<Loading />}>
+            <AboutUs />
           </Suspense>
         }
       />

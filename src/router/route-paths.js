@@ -10,5 +10,8 @@ export const routePaths = {
     root: "/services",
     details: `/services/:id`,
   },
+  about: {
+    root: "/about",
+  },
   notFound: "*",
 };
