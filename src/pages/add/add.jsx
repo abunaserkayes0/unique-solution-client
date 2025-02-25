@@ -3,17 +3,17 @@ import { getServiceId } from "../../api/api";
 import AddService from "../../components/ui/services/addService/addService";
 import { useEffect, useState } from "react";
 export default function Add() {
-  const { id } = useParams();
+  const { title } = useParams();
   const [service, setService] = useState({});
   useEffect(() => {
     async function fetchService() {
-      if (id) {
+      if (title) {
         const service = await getServiceId(id);
         setService(service);
       }
     }
     fetchService();
-  }, [id]);
+  }, [title]);
   return (
     <div>
       <AddService service={service} />
