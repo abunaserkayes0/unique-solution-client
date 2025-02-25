@@ -8,7 +8,7 @@ export default function Add() {
   useEffect(() => {
     async function fetchService() {
       if (title) {
-        const service = await getServiceId(id);
+        const service = await getServiceId(title);
         setService(service);
       }
     }
