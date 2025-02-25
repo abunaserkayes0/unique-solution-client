@@ -1,4 +1,4 @@
-export default function File({ label, type }) {
+export default function File({ label, type, name, onChange }) {
   return (
     <div>
       <label className="label">
@@ -7,6 +7,8 @@ export default function File({ label, type }) {
       <input
         type={type}
         className="file-input w-full"
+        name={name}
+        onChange={onChange}
       />
     </div>
   );

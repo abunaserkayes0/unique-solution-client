@@ -1,4 +1,4 @@
-export default function TextArea({ label, placeholder }) {
+export default function TextArea({ label, placeholder, name }) {
   return (
     <div>
       <label className="label">
@@ -7,6 +7,7 @@ export default function TextArea({ label, placeholder }) {
       <textarea
         placeholder={placeholder}
         className="textarea textarea-bordered w-full"
+        name={name}
       ></textarea>
     </div>
   );
