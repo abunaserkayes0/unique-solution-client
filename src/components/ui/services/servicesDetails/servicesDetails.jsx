@@ -6,6 +6,8 @@ import { getServiceId } from "../../../../api/api";
 
 export default function ServiceDetails() {
   const { title } = useParams();
+  console.log(title);
+
   const [service, setService] = useState(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
@@ -51,7 +53,7 @@ export default function ServiceDetails() {
         )}
       </div>
       <div
-        onClick={() => navigate(`/add/${title}`)}
+        onClick={() => navigate(`/add/${serviceTitle}`)}
         className="max-w-md mx-auto btn py-3 px-4 rounded-md hover:cursor-pointer hover:bg-gray-800"
       >
         <Button>Add Items</Button>
