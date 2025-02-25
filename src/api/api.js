@@ -9,9 +9,9 @@ const getServices = async () => {
   }
 };
 
-const getServiceId = async (id) => {
+const getServiceId = async (title) => {
   try {
-    const { data } = await axios.get(`/services/${id}`);
+    const { data } = await axios.get(`/services/${title}`);
     return data;
   } catch (error) {
     console.error("Error fetching service:", error);

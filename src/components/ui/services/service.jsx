@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
 export default function Service({
-  service: { _id, title, slogan, shortmessage, image },
+  service: { title, slogan, shortmessage, image },
 }) {
   const navigate = useNavigate();
 
   return (
     <div
-      onClick={() => navigate(`/services/${_id}`)}
+      onClick={() => navigate(`/services/${title}`)}
       className="relative card bg-base-100 shadow-lg hover:cursor-pointer overflow-hidden group"
     >
       <figure className="h-[20rem] overflow-hidden relative">

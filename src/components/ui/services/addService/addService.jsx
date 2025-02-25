@@ -3,7 +3,6 @@ import Input from "../../input/input";
 import TextArea from "../../textArea/textArea";
 import Loading from "../../loading";
 import { useState } from "react";
-import axios from "../../../../utils/axios";
 
 export default function AddService({ service = {} }) {
   const [imageUrl, setImageUrl] = useState("");
@@ -17,22 +16,28 @@ export default function AddService({ service = {} }) {
   const handleUploadImage = async (e) => {
     e.preventDefault();
     const file = e.target.files[0];
-    const fromData = new FormData();
-    fromData.append("file", file);
-    fromData.append("upload_preset", import.meta.env.VITE_UPLOAD_PRESET);
-    fromData.append("cloud_name", import.meta.env.VITE_CLOUD_NAME);
-    try {
-      const res = await axios.post(
-        `https://api.cloudinary.com/v1_1/${
-          import.meta.env.VITE_CLOUD_NAME
-        }/image/upload`,
-        fromData
-      );
-      const urlImage = res.data;
-      console.log(urlImage);
-    } catch (error) {
-      console.error("Error uploading image:", error);
+
+    if (!file) {
+      console.error("No file selected.");
+      return;
     }
+
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", import.meta.env.VITE_UPLOAD_PRESET);
+    formData.append("cloud_name", import.meta.env.VITE_CLOUD_NAME);
+
+    const response = await fetch(
+      `https://api.cloudinary.com/v1_1/${
+        import.meta.env.VITE_CLOUD_NAME
+      }/image/upload`,
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+    const result = await response.json();
+    setImageUrl(result.secure_url);
   };
 
   const handleSubmit = (e) => {
@@ -41,7 +46,7 @@ export default function AddService({ service = {} }) {
     const title = formData.get("title");
     const description = formData.get("description");
 
-    console.log({ title, description });
+    console.log(title, description, imageUrl);
   };
 
   return (
@@ -55,6 +60,15 @@ export default function AddService({ service = {} }) {
       <div className="mb-4">
         <File type="file" name="file" onChange={handleUploadImage} />
       </div>
+      {imageUrl && (
+        <div className="mb-4">
+          <img
+            src={imageUrl}
+            alt="Uploaded Preview"
+            className="w-full h-auto rounded-lg"
+          />
+        </div>
+      )}
       <div className="mb-4">
         <Input
           placeholder="Enter Your Title"
