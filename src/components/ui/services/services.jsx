@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import axios from "../../../utils/axios";
 import Loading from "../loading";
 import Service from "../services/service";
 import Content from "../content/content";
+import { getServices } from "../../../api/api";
 
 export default function Services() {
   const [services, setServices] = useState([]);
@@ -11,7 +11,7 @@ export default function Services() {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const { data } = await axios.get("/services");
+        const data = await getServices();
         setServices(data);
       } catch (error) {
         console.error("Error fetching services:", error);

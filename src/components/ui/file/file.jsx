@@ -1,4 +1,4 @@
-export default function input({ type, placeholder, label, ...rest }) {
+export default function File({ label, type }) {
   return (
     <div>
       <label className="label">
@@ -6,9 +6,7 @@ export default function input({ type, placeholder, label, ...rest }) {
       </label>
       <input
         type={type}
-        placeholder={placeholder}
-        className="input w-full"
-        {...rest}
+        className="file-input w-full"
       />
     </div>
   );

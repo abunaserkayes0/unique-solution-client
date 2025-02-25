@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import axios from "../../../utils/axios";
-import Loading from "../loading";
+import { useNavigate, useParams } from "react-router-dom";
+import Loading from "../../loading";
+import Button from "../../button/button";
+import { getServiceId } from "../../../../api/api";
 
 export default function ServiceDetails() {
   const { id } = useParams();
   const [service, setService] = useState(null);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchService = async () => {
       try {
-        const { data } = await axios.get(`/services/${id}`);
+        const data = await getServiceId(id);
         setService(data);
       } catch (error) {
         console.error("Error fetching service:", error);
@@ -31,7 +33,7 @@ export default function ServiceDetails() {
   const { title, description, image, shortlist = [] } = service;
 
   return (
-    <div className="card bg-base-100 shadow-sm">
+    <div className="card bg-base-100">
       {image && (
         <figure>
           <img src={image} alt={title || "Service Image"} />
@@ -47,6 +49,12 @@ export default function ServiceDetails() {
             ))}
           </ul>
         )}
+      </div>
+      <div
+        onClick={() => navigate(`/add/${id}`)}
+        className="max-w-md mx-auto btn py-3 px-4 rounded-md hover:cursor-pointer hover:bg-gray-800"
+      >
+        <Button>Add Items</Button>
       </div>
     </div>
   );

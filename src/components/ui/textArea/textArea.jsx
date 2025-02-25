@@ -1,15 +1,13 @@
-export default function input({ type, placeholder, label, ...rest }) {
+export default function TextArea({ label, placeholder }) {
   return (
     <div>
       <label className="label">
         <span className="label-text">{label}</span>
       </label>
-      <input
-        type={type}
+      <textarea
         placeholder={placeholder}
-        className="input w-full"
-        {...rest}
-      />
+        className="textarea textarea-bordered w-full"
+      ></textarea>
     </div>
   );
 }
