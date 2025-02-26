@@ -3,10 +3,15 @@ import Input from "../../input/input";
 import TextArea from "../../textArea/textArea";
 import Loading from "../../loading";
 import { useState } from "react";
+import axios from "axios";
+import axiosUrl from "../../../../utils/axios";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import { routePaths } from "../../../../router/route-paths";
 
 export default function AddService({ service = {} }) {
   const [imageUrl, setImageUrl] = useState("");
-
+  const navigate = useNavigate();
   const { title } = service;
 
   if (!title) {
@@ -27,26 +32,36 @@ export default function AddService({ service = {} }) {
     formData.append("upload_preset", import.meta.env.VITE_UPLOAD_PRESET);
     formData.append("cloud_name", import.meta.env.VITE_CLOUD_NAME);
 
-    const response = await fetch(
+    const result = await axios.post(
       `https://api.cloudinary.com/v1_1/${
         import.meta.env.VITE_CLOUD_NAME
       }/image/upload`,
-      {
-        method: "POST",
-        body: formData,
-      }
+      formData
     );
-    const result = await response.json();
-    setImageUrl(result.secure_url);
+
+    setImageUrl(result.data.secure_url);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    const title = formData.get("title");
+    const subTitle = formData.get("subtitle");
     const description = formData.get("description");
 
-    console.log(title, description, imageUrl);
+    const data = {
+      subTitle,
+      description,
+      imageUrl,
+    };
+    try {
+      const response = await axiosUrl.post(`/add/${title}`, data);
+      if (response.status === 200) {
+        toast.success("Service Added Successfully");
+        navigate(routePaths.home.root);
+      }
+    } catch (error) {
+      toast.error("Failed to Add Service", error);
+    }
   };
 
   return (
@@ -71,9 +86,9 @@ export default function AddService({ service = {} }) {
       )}
       <div className="mb-4">
         <Input
-          placeholder="Enter Your Title"
+          placeholder="Enter Your Subtitle"
           type="text"
-          name="title"
+          name="subtitle"
           required
         />
       </div>
