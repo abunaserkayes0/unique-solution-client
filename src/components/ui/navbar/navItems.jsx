@@ -21,10 +21,10 @@ export default function NavItems() {
           <span tabIndex={0} className="focus:outline-none cursor-pointer">
             Service
           </span>
-          <ul className="dropdown-content menu bg-base-100 rounded-box z-50 w-64 shadow-sm">
-            <li className="relative group">
+          <ul className="dropdown-content menu bg-base-100 rounded-box z-50 shadow-sm w-[400px]">
+            <li className="dropdown dropdown-hover dropdown-right">
               <span>Consultancy & Advisory Services</span>
-              <ul className="absolute left-full top-0 hidden group-hover:block bg-base-100 rounded-box z-50 w-96 p-2 shadow-sm">
+              <ul>
                 {[
                   "Procurement & Supply Chain Consultancy",
                   "Business Establishment & Investment Advisory",
@@ -40,9 +40,9 @@ export default function NavItems() {
                 ))}
               </ul>
             </li>
-            <li className="relative group">
+            <li className="dropdown dropdown-hover dropdown-right">
               <span>Business & Affiliate Ventures</span>
-              <ul className="absolute left-full top-0 hidden group-hover:block bg-base-100 rounded-box z-50 w-96 shadow-sm">
+              <ul>
                 {[
                   "Healthcare & Wellness Solutions",
                   "Education & Skill Development",
