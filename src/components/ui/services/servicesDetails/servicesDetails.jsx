@@ -40,36 +40,37 @@ export default function ServiceDetails() {
   } = service;
 
   return (
-    <div className="card bg-base-100 text-xl">
-      {image && (
-        <figure className="card-image">
-          <img src={image} alt={serviceTitle || "Service Image"} />
-        </figure>
-      )}
-      <div className="card-body">
-        <h2 className="card-title">{serviceTitle}</h2>
-        <p>{description}</p>
-        {shortlist.length > 0 && (
-          <ul className="list-disc list-inside">
-            {shortlist.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        )}
-      </div>
+    <div className="card bg-base-100 text-xl animate__animated animate__lightSpeedInLeft">
       <div>
-        <h3 className="text-4xl font-bold text-center my-4">
-          Our Personal Brands
-        </h3>
+        {image && (
+          <figure className="card-image">
+            <img src={image} alt={serviceTitle || "Service Image"} />
+          </figure>
+        )}
+        <div className="card-body">
+          <h2 className="card-title">{serviceTitle}</h2>
+          <p>{description}</p>
+          {shortlist.length > 0 && (
+            <ul className="list-disc list-inside">
+              {shortlist.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+      <div className="animate__animated animate__lightSpeedInRight">
+        {brand.length > 0 && (
+          <h3 className="text-4xl font-bold text-center my-4">
+            Our Personal Brands
+          </h3>
+        )}
         {brand.length === 0 ? (
-          <p className="text-center text-gray-500">No items found</p>
+          <p className="text-center text-gray-500">No Brand items found</p>
         ) : (
           brand.map((item, index) => (
-            <>
-              <div
-                key={index}
-                className="card lg:card-side bg-base-100 shadow-sm"
-              >
+            <div key={index}>
+              <div className="card lg:card-side bg-base-100 shadow-sm">
                 <figure>
                   <img src={item?.imageUrl} alt="Album" />
                 </figure>
@@ -78,7 +79,7 @@ export default function ServiceDetails() {
                   <p>{item.description}</p>
                 </div>
               </div>
-            </>
+            </div>
           ))
         )}
       </div>

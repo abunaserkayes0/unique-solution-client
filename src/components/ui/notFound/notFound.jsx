@@ -8,7 +8,7 @@ export default function NotFound() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <img
-        src="https://res.cloudinary.com/dhjkntuy2/image/upload/v1740254020/Unique%20Solution/only-images/NotFound_zywghl.jpg"
+        src="https://res.cloudinary.com/dhjkntuy2/image/upload/v1740520632/Unique%20Solution/only-images/NotFound_dfhgb4.jpg"
         alt="Image is missing here"
         className="max-w-full h-auto object-contain"
       />

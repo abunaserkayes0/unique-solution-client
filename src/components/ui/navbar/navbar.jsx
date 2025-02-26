@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { navItems } from "./navItems";
+import NavItems from "./navItems";
 export default function Navbar() {
   return (
     <div className="navbar bg-base-100 sticky top-0 z-10 shadow">
@@ -25,7 +25,7 @@ export default function Navbar() {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 p-2 shadow"
           >
-            {navItems}
+            <NavItems />
           </ul>
         </div>
         <Link to="/">
@@ -38,7 +38,9 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navItems}</ul>
+        <ul className="menu menu-horizontal px-1">
+          <NavItems />
+        </ul>
       </div>
       <div className="navbar-end">
         <Link to="/login" className="btn">
