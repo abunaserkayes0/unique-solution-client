@@ -38,7 +38,7 @@ const AboutUs = () => {
           Our Core Values
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {coreValues.map((value, index) => (
+          {coreValues?.map((value, index) => (
             <div key={index} className="p-4 card shadow-md hover:shadow-lg hover:shadow-neutral-700 hover:transform hover:-translate-y-3 transition-transform text-center">
               <FileArchive className=" text-4xl mx-auto mb-3" />
               <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
@@ -52,7 +52,7 @@ const AboutUs = () => {
       <div className="mb-12">
         <h2 className="text-3xl font-bold text-center  mb-6">Meet the Team</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {teamMembers.map((member, index) => (
+          {teamMembers?.map((member, index) => (
             <Team key={index} member={member} />
           ))}
         </div>

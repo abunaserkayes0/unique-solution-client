@@ -52,7 +52,7 @@ export default function ServiceDetails() {
           <p>{description}</p>
           {shortlist.length > 0 && (
             <ul className="list-disc list-inside">
-              {shortlist.map((item, index) => (
+              {shortlist?.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
@@ -68,7 +68,7 @@ export default function ServiceDetails() {
         {brand.length === 0 ? (
           <p className="text-center text-gray-500">No Brand items found</p>
         ) : (
-          brand.map((item, index) => (
+          brand?.map((item, index) => (
             <div key={index}>
               <div className="card lg:card-side bg-base-100 shadow-sm">
                 <figure>

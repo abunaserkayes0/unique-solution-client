@@ -33,7 +33,7 @@ export default function Services() {
         {loading ? (
           <Loading />
         ) : (
-          services.map((service) => (
+          services?.map((service) => (
             <Service key={service._id} service={service} />
           ))
         )}

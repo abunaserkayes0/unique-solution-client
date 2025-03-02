@@ -31,7 +31,7 @@ export default function NavItems() {
                   "Construction & Engineering Services",
                   "Textile & Apparel Industry Consultancy",
                   "Logistics & Transportation Advisory",
-                ].map((service) => (
+                ]?.map((service) => (
                   <li key={service}>
                     <Link to={`services/${service}`} onClick={handleLinkClick}>
                       {service}
@@ -54,7 +54,7 @@ export default function NavItems() {
                   "Optical & Vision Care Solutions",
                   "Event Planning, Photography & Tourism Services",
                   "Digital Innovation & Technology Solutions",
-                ].map((service) => (
+                ]?.map((service) => (
                   <li key={service}>
                     <Link to={`services/${service}`} onClick={handleLinkClick}>
                       {service}
