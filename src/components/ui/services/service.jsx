@@ -20,13 +20,16 @@ export default function Service({
       </figure>
 
       <div
-        className="absolute inset-0 flex flex-col justify-end p-4 text-white 
+        className="absolute inset-0 flex flex-col justify-end text-center p-4 text-white 
         opacity-100 translate-y-0 
         sm:opacity-100 sm:translate-y-0  
         md:opacity-100 md:translate-y-0 
         lg:opacity-0 lg:translate-y-8 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0"
       >
-        <h2 className="text-2xl font-bold">{slogan}</h2>
+        <h1 className="text-2xl font-bold my-10 md:text-3xl lg:text-4xl">
+          {title}
+        </h1>
+        <h2 className="text-xl font-bold">{slogan}</h2>
         <p className="text-sm">{shortmessage}</p>
       </div>
 
